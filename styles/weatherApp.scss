@@ -1,37 +1,178 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 $border-color: black;
 
 .search_city_form {
-    .search-city-input {
-        border-radius: 9px;
-        border: none;
-        box-shadow: 1px 3px 10px 3px $border-color;
-        width: 313px;
-        height: 40px;
-        background: #f5f5f5;
-        text-align: center;
-        padding-left: 11px;
-        padding-right: 11px;
-        font-family: 'Sofia Sans', sans-serif;
-        font-size: 21px;   
-    }
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+   
+}
+
+.search-city-input {
+    display: block;
+    width: 490px;
+    height: calc(2.8rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+
+.search-city-input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  }
+
+  .search-city-input:disabled,
+  .search-city-input[readonly] {
+    background-color: #f5f5f5;
+    opacity: 1;
+  }
+.search-city-input::placeholder {
+color: #212529;
+opacity: 0.4;
+} 
+
+.search-city-inpit-wrapper {
+position: relative;
+}     
+
+.search-city-input:disabled,
+.search-city-input[readonly] {
+background-color: #f5f5f5;
+opacity: 1;
+}
+.search-city-input-wrapper .search-city-input {
+height: calc(2.5rem + 2px);
+padding: 0.5rem 0.75rem;
+}
+
+.search-city-inpit-wrapper .input-label { // field-floating это Wrapper
+position: absolute;
+top: 50%;
+left: 0.3125rem;
+display: flex;
+transform: translateY(-50%);
+pointer-events: none;
+border: none;
+background-color: #fff;
+color: #757575;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+font-family: 'Sofia Sans', sans-serif;
+}
+
+.search-city-inpit-wrapper .search-city-input::placeholder { // field-floating это Wrapper
+color: transparent;
+}
+.search-city-inpit-wrapper .search-city-input:focus~.input-label,
+.search-city-inpit-wrapper .search-city-input:not(:placeholder-shown)~.input-label {
+top: 0;
+transform: translateY(-50%) scale(0.75);
 }
 
 
 .weather-comments-wrapper {
-    border: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-    width: 330px;
-    .weather-title {
-        font-size: 22px;
-        font-family: 'Sofia Sans', sans-serif;  
-        text-align: center;
-    }
+    justify-content: space-between;
+    margin: auto;
+    width: 490px;
+  
     .weather-comments {
-        font-size: 16px;
-        text-align: center;
+        font-size: 15px;
         font-family: 'Sofia Sans', sans-serif;    
     }
+    .weather-comments-title {
+        font-size: 39px;
+        font-family: 'Sofia Sans', sans-serif;  
+    }
+
+    .weather-comments-description {
+        font-size: 16px;
+        font-family: 'Sofia Sans', sans-serif; 
+        text-align: right;
+    }
+
+    .weather-comments-wrapper {
+        position: absolute;
+    }
+
+    .clouds {
+        padding-right: 10px;
+    }
+
+    .wind {
+        padding-left: 10px;
+    }
+
+    .humidity {
+        padding-right: 10px;
+    }
+
+    .weather-comments-location {
+        font-size: 23px;
+        font-family: 'Sofia Sans', sans-serif;
+        text-align: right;
+        padding-top: 15px;
+    }
+}
+
+.digrease {
+    font-size: 13px;
+}
+
+.description {
+    padding-left: 7px;
+}
+
+
+.only-weather-container {
+    display: flex;
+}
+
+.weather-description-wrapper {
+    padding-left: 30px;
+    padding-top: 29px;
+}
+
+.weather-comments-time {
+    font-size: 20px;
+    text-align: right;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.week-container {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.week-weather-wrapper {
+    background: red;
+}
+
+.week-weather {
+    font-size: 16px;
+    color: black;
+    font-family: 'Sofia Sans', sans-serif;
 }

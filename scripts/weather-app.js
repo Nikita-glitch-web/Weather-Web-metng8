@@ -308,3 +308,4 @@ const t = new SearchCityForm(
 //Copy to Clipboard
 //Считывать данные из localStorage для определённого ключа, можно следующим образом:
 //let cat = localStorage.getItem('myCat');
+

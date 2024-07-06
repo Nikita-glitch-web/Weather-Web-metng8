@@ -20,7 +20,7 @@ required/>
 
 const appId = "103d2bea1f0fea90b85f7ca4c51dcc4f";
 
-const API_URL = `http://api.openweathermap.org`;
+const API_URL = `https://api.openweathermap.org`;
 const API_URL_SECOND = ``;
 
 const createRequestCityUrl = (cityName, units = 'metric') => {
@@ -284,7 +284,7 @@ class SearchCityForm {
     this.favoritesCities.forEach((cityData) => {
       content += `
       <div class="city">
-          <h2 class="favourite-city-title">${cityData.city}</h2>
+          <h2 class="favourite-city-title">${cityData.name}</h2>
           <button class="city__btn" id="${cityData.city}">Open</button>
       </div>
       `
